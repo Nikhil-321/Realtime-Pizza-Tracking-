@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+}
+
+.cart {
+  background: #FE5F1E;
+  color: #fff;
+  font-size: 25px;
+}
+
+.cart {
+  transition: all 0.3s ease-in-out;
+}
+
+.cart:hover {
+  background: #b23301;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+
+nav li a:hover {
+  color: #b23301;
+}
+
+section.main {
+  background: #F8F8F8;
+}
+
+.size {
+  background: #ccc;
+}
+
+.add-to-cart {
+  border: 2px solid #FE5F1E;
+  color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background: #FE5F1E;
+  color: #fff;
+}
+

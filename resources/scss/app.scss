@@ -1,0 +1,49 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+
+}
+
+.cart{
+    background: $primary;
+    color: $pure;
+    font-size: 25px;
+}
+
+.cart{
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+}
+
+nav li a{
+    transition: $smooth;
+    &:hover{
+        color: $primary-hover;
+        
+    }
+}
+
+section.main{
+    background : $secondary;
+}
+
+.size{
+    background: $gray;
+}
+
+.add-to-cart{
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary;
+        color: $pure;
+
+    }
+}
