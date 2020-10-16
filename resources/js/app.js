@@ -115,7 +115,7 @@ const alertMsg = document.getElementById('alert');
     // Socket
 
     const socket = io()
-    initAdmin(socket)
+    
 
     if(order){
         socket.emit('orderId' , `order_${order._id}`)
@@ -138,6 +138,8 @@ const alertMsg = document.getElementById('alert');
     })
 
     let AdminArea = window.location.pathname
+
+    initAdmin(socket)
     console.log(AdminArea)
 
     if(AdminArea.includes('admin')){

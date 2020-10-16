@@ -28660,7 +28660,6 @@ function updateStatus(order) {
 updateStatus(order); // Socket
 
 var socket = io();
-Object(_admin__WEBPACK_IMPORTED_MODULE_3__["initAdmin"])(socket);
 
 if (order) {
   socket.emit('orderId', "order_".concat(order._id));
@@ -28680,6 +28679,7 @@ socket.on('statusUpdated', function (data) {
   }).show();
 });
 var AdminArea = window.location.pathname;
+Object(_admin__WEBPACK_IMPORTED_MODULE_3__["initAdmin"])(socket);
 console.log(AdminArea);
 
 if (AdminArea.includes('admin')) {

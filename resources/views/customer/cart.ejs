@@ -1,7 +1,7 @@
-<section class="empty-cart">
+<section class="empty-cart pb-4">
 
     <% if(session.cart) { %>
-    <div class="order-items container mx-auto w-1/2">
+    <div class="order-items container mx-auto w-full md:w-1/2">
         
         <div class="flex items-center border-b border-gray-300 py-4">
             <img class="mr-4" src="/img/cart-black.png" alt="">
@@ -46,12 +46,12 @@
                         <% } %>
                         <input name="phone" class="border border-gray-400 w-1/2 mt-4 py-2 px-2" type="text" placeholder="Phone Number">
                         <input name="address" class="border border-gray-400 w-1/2 mt-4 py-2 px-2" type="text" placeholder="Address">
-                        <button type="submit" style="display: block; margin-left: 32rem;" class="order-now rounded-full px-6 py-2 w-1/4 mt-4 font-bold">Order Now</button>
+                        <button type="submit" style="display: block;" class="order-now rounded-full px-6 py-2 ml-auto mt-4 font-bold focus:outline-none">Order Now</button>
 
                     </form>
                 </div>
                 <% }else{ %>
-              <a class=" inline-block rounded-full py-2 px-6 order-now mt-6 font-bold" href="/login">Login to Order</a>
+              <a class=" inline-block rounded-full py-2 px-6 order-now mt-6 font-bold focus:outline-none" href="/login">Login to Order</a>
                 <% } %>
             </div>
 
