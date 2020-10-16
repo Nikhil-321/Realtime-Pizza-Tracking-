@@ -1,5 +1,9 @@
 @import './variables';
+@import './login';
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
 
 body{
     font-family: 'Lato', sans-serif;
@@ -12,6 +16,10 @@ body{
     background: $primary;
     color: $pure;
     font-size: 25px;
+}
+
+.color{
+    color: $primary;
 }
 
 .cart{
@@ -46,4 +54,185 @@ section.main{
         color: $pure;
 
     }
+    &:focus{
+        outline: none;
+    }
 }
+
+.order-now{
+    background: $primary;
+    color: $pure;
+    transition: $smooth;
+    border: 2px solid $primary;
+    &:hover{
+        background: $pure;
+        color: $primary;
+    }
+}
+
+
+section.empty-cart{
+    background: $secondary;
+}
+
+.noty_theme__mint.noty_type__success{
+    border-radius : 50px !important;
+    padding-left: 8px !important;
+}
+
+.noty_theme__mint.noty_type__failure{
+    border-radius : 50px !important;
+    padding-left: 8px !important;
+    background : red;
+    color: $pure;
+}
+
+
+.link{
+    color: $primary;
+}
+
+.no-orders{
+    color: $primary;
+}
+
+section.order_status{
+    height: calc(100vh - 86px);
+    background: $secondary;
+}
+
+.status_list li span{
+    position: relative;
+    padding-left: 20px;
+}
+
+
+// Dots
+
+.status_list li span::before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    background: $dark;
+    width: 10px;
+    height: 10px;
+    color: inherit;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    
+    
+}
+
+.status_list{
+    margin-left: 75px;
+    
+}
+
+
+// Icons
+
+.status_list li span::after{
+    
+    font-family: 'Line Awesome Free';
+    font-size: 46px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -90px;
+    color: inherit;
+}
+
+.status_list li:nth-child(1) span::after{
+    content: '\f46c';
+}
+
+.status_list li:nth-child(2) span::after{
+    content: '\f560';
+}
+
+.status_list li:nth-child(3) span::after{
+    content: '\f818';
+}
+
+.status_list li:nth-child(4) span::after{
+    content: '\f0d1';
+}
+
+.status_list li:nth-child(5) span::after{
+    content: '\f582';
+}
+
+
+// Line
+.status_list{
+    position: relative;
+}
+
+.status_list li::before{
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -6px;
+    background: $dark;
+    margin-top: 10px;
+}
+
+.status_list li.step-completed span::after{
+
+    color: $gray;
+
+}
+
+
+
+// step completed
+.status_list li.step-completed span::before{
+    background: $gray;
+}
+
+.status_list li.step-completed span{
+    color: $gray;
+}
+
+
+.status_list li.step-completed::before{
+    background: $gray;
+}
+
+
+// current step
+
+.status_list li.current-step span::before{
+
+        background: $primary;
+}
+
+.status_list li.current-step span{
+    color: $primary;
+}
+
+.status_list li small{
+    float: right;
+    margin-top: 10px;
+    color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

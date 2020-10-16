@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Pizza Tracking App</title>
+</head>
+<body>
+    <nav class="container mx-auto flex items-center justify-between py-4">
+        <div>
+          
+         <a href="/"> <img src="/img/logo.png" alt="Pizza.png"> </a>   
+
+        </div>
+        <div class="nav-items">
+            <ul class="flex items-center">
+               <li  class="ml-6"><a href= "#">Menu</a></li>
+               <li  class="ml-6"><a href= "#">Offers</a></li>
+               
+               <% if(user){ %>
+                <form action="/logout" method="POST">
+
+               <li  class="ml-6"><button type="submit">Logout</button></li> 
+
+            </form> 
+                <% } else{ %>
+
+               <li  class="ml-6"><a href= "/register">Register</a></li> 
+               <li  class="ml-6"><a href= "/login">Login</a></li>
+
+               <% }%>
+
+               <li  class="ml-6"><a href="/cart">
+                
+                <i class="fas fa-shopping-cart cart mx-2 py-2 px-4 rounded-full">
+                    <span id="cart-counter"><%= session.cart ? session.cart.totalQty : '' %></span>
+                </i></a></li>  
+            </ul>
+
+        </div>
+    </nav>
+    <%- body %>
+
+
+    <footer></footer>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div class="login-card" style="margin-top: 7%;width: 25%;">
+    <h1>Register</h1><br>
+  <form action="/register" method="POST">
+    <% if(messages.error){ %>
+    <span class="text-red-500 text-small "><%= messages.error %></span>
+    <% } %>
+    <input name="name" type="text" name="user" placeholder="Name" value="<%= messages.name %>">
+    <input name="email" type="text" name="pass" placeholder="Email" value="<%= messages.email %>">
+    <input name="password" type="password" name="pass" placeholder="Password">
+
+    <input type="submit" class="login login-submit" value="Register">
+  </form>
+    
+  <div class="login-help">
+    <a href="#"></a>Already a member? • <a href="/login">Login</a>
+  </div>
+</div> 

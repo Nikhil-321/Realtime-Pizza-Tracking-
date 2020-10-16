@@ -1,0 +1,71 @@
+<section class="orders light-section">
+
+
+    
+    <div class="container mx-auto">
+
+    <div class="py-4 px-4">
+        <h1 class="text-lg font-bold ">All Orders</h1>
+    </div>
+
+
+
+    <% if(messages.success){ %>
+
+    <div id="alert" class="bg-green-500 py-2 px-4 font-bold text-white " role="alert"><%= messages.success %></div>
+
+        <% }%>
+    <table class="table-auto bg-white border w-full ">
+
+        <% if(orders.length){ %>
+
+        <thead>
+            <tr>
+                <th class="px-4 py-2 text-left">Orders</th>
+                <th class="px-4 py-2 text-left">Address</th>
+                <th class="px-4 py-2 text-left">Phone No.</th>
+                <th class="px-4 py-2 text-left">Time</th>
+
+            </tr>
+        </thead>
+
+        <tbody class="border py-2 px-2">
+
+
+                
+                <% orders.forEach((order) => { %>
+
+                    <tr class="border">
+
+                        <td  class="py-2 px-2 link "><a href="/customer/orders/<%= order._id %>"><%= order._id %></a></td>
+                        <td  class="py-2 px-2"><%= order.address %></td>
+                        <td  class="py-2 px-2"><%= order.address %></td>
+                        <td  class="py-2 px-2"><%= moment(order.createdAt).format('hh:mm A') %></td>
+                    </tr>
+
+
+               <% }) %>
+
+               <% } else{ %>
+
+                <div class="no-orders py-24">
+
+                <h1 style="font-size: 2rem;" class=" font-bold text-center">No orders yet</h1>
+                <h2 style="font-size: 1rem;" class="font-bold text-center">Order Now and enjoy some delicious Pizzas!</h2>
+                        </div>
+                <% }%>
+            
+
+                
+
+        
+
+           
+
+           
+        </tbody>
+
+    </table>
+
+    </div>
+</section>
